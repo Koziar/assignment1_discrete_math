@@ -40,20 +40,30 @@ in(system_integration,3).
 ```
 mates(X,Y) :-
     student(X),
-    takes(X,discreet_mathematics),
+    takes(X,Class),
     student(Y),
-    takes(Y,discreet_mathematics).
+    takes(Y,Class).
 
 goodProgrammer(X) :-
     takes(X,discreet_mathematics).
 goodProgrammer(X) :-
     takes(X,large_system_development).
 
-isInterestingClass(X,Y,Z) :-
+isInterestingClass(X,Y,Class) :-
     student(X),
     student(Y),
-    class(Z),
-    takes(X,Z),
-    takes(Y,Z).   
+    class(Class),
+    takes(X,Class),
+    takes(Y,Class).
+
+atSchool(X,Date) :-
+    student(X),
+    date(Date),
+    takes(X,Class),
+    on(Class,Date).
+
+isOccupied(Room,Date) :-
+    on(Class,Date),
+    in(Class,Room). 
 
 ```
