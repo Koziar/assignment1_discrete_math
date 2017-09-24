@@ -49,9 +49,7 @@ goodProgrammer(X) :-
 goodProgrammer(X) :-
     takes(X,large_system_development).
 
-isInterestingClass(X,Y,Class) :-
-    student(X),
-    student(Y),
+isInterestingClass(Class) :-
     class(Class),
     takes(X,Class),
     takes(Y,Class).
@@ -64,6 +62,28 @@ atSchool(X,Date) :-
 
 isOccupied(Room,Date) :-
     on(Class,Date),
-    in(Class,Room). 
+    in(Class,Room).
+```
+## questions
+```
+?- mates(lukasz,william).
+ /* Prolog will reply:
+    yes */
 
+?- goodProgrammer(lukasz).
+ /* Prolog will reply:
+    yes */
+
+?- isInterestingClass(What).
+ /* Prolog will reply:
+    What=discreet_mathematics
+    yes */
+
+?- atSchool(william,27092017).
+ /* Prolog will reply:
+    yes */
+
+?- isOccupied(3,26092017).
+ /* Prolog will reply:
+    no */
 ```
