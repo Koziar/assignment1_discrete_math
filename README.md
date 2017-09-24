@@ -19,7 +19,7 @@ date(26092017).
 date(27092017).
 date(28092017).
 ```
-## Facts
+## facts
 ```
 takes(lukasz,discreet_mathematics).
 takes(william,discreet_mathematics).
@@ -36,7 +36,7 @@ in(discreet_mathematics,1).
 in(large_system_development,2).
 in(system_integration,3).
 ```
-## Rules
+## rules
 ```
 atSchool(X,Y) :-
     student(X),
