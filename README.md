@@ -70,7 +70,15 @@ isOccupied(Room,Date) :-
  /* Prolog will reply:
     yes */
 
+?- mates(bill,william).
+ /* Prolog will reply:
+    no */
+
 ?- goodProgrammer(lukasz).
+ /* Prolog will reply:
+    yes */
+
+?- goodProgrammer(william).
  /* Prolog will reply:
     yes */
 
@@ -79,9 +87,17 @@ isOccupied(Room,Date) :-
     What=discreet_mathematics
     yes */
 
+?- isInterestingClass(system_integration).
+ /* Prolog will reply:
+    no */
+
 ?- atSchool(william,27092017).
  /* Prolog will reply:
     yes */
+
+?- atSchool(adam,26092017).
+ /* Prolog will reply:
+    no */
 
 ?- isOccupied(3,26092017).
  /* Prolog will reply:
