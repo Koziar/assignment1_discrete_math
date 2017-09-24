@@ -38,11 +38,6 @@ in(system_integration,3).
 ```
 ## rules
 ```
-atSchool(X,Y) :-
-    student(X),
-    date(Y),
-    takes(X,large_system_development).
-
 mates(X,Y) :-
     student(X),
     takes(X,discreet_mathematics),
@@ -51,9 +46,14 @@ mates(X,Y) :-
 
 goodProgrammer(X) :-
     takes(X,discreet_mathematics).
+goodProgrammer(X) :-
+    takes(X,large_system_development).
 
-isOccupied(X,Y) :-
-    room(X),
-    date(Y).    
+isInterestingClass(X,Y,Z) :-
+    student(X),
+    student(Y),
+    class(Z),
+    takes(X,Z),
+    takes(Y,Z).   
 
 ```
